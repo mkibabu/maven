@@ -1,4 +1,4 @@
-package org.mvnex.custom
+package org.mvnex.custom.weather;
 
 public class Weather {
   private String city;

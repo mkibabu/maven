@@ -1,5 +1,4 @@
-package org.custom.mvnex.weather;
-
+package org.mvnex.custom.weather;
 
 import java.io.InputStreamReader;
 import java.io.Reader;

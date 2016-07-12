@@ -1,4 +1,4 @@
-package org.mvnex.custom
+package org.mvnex.custom.weather;
 
 import java.io.InputStream;
 
