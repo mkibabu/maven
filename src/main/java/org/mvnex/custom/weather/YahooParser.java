@@ -2,12 +2,14 @@ package org.mvnex.custom.weather;
 
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentFactory;
 import org.dom4j.io.SAXReader;
+import org.dom4j.Node;
 
 public class YahooParser {
 
@@ -22,19 +24,19 @@ public class YahooParser {
 
     log.info( "Parsing XML Response" );
     weather.setCity(
-      doc.valueOf("/rss/channel/y:location/@city") );
+      doc.valueOf("/query/results/channel/y:location/@city") );
     weather.setRegion(
-      doc.valueOf("/rss/channel/y:location/@region") );
+      doc.valueOf("/query/results/channel/y:location/@region") );
     weather.setCountry(
-      doc.valueOf("/rss/channel/y:location/@country") );
+      doc.valueOf("/query/results/channel/y:location/@country") );
     weather.setCondition(
-      doc.valueOf("/rss/channel/item/y:condition/@text") );
+      doc.valueOf("/query/results/channel/item/y:condition/@text") );
     weather.setTemp(
-      doc.valueOf("/rss/channel/item/y:condition/@temp") );
+      doc.valueOf("/query/results/channel/item/y:condition/@temp") );
     weather.setChill(
-      doc.valueOf("/rss/channel/y:wind/@chill") );
+      doc.valueOf("/query/results/channel/y:wind/@chill") );
     weather.setHumidity(
-      doc.valueOf("/rss/channel/y:atmosphere/@humidity") );
+      doc.valueOf("/query/results/channel/y:atmosphere/@humidity") );
 
     return weather;
   }
