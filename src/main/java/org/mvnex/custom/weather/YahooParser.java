@@ -2,14 +2,12 @@ package org.mvnex.custom.weather;
 
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
 import org.dom4j.DocumentFactory;
 import org.dom4j.io.SAXReader;
-import org.dom4j.Node;
 
 public class YahooParser {
 
